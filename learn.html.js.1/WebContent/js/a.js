@@ -17,37 +17,33 @@ function inputsForAccount(){
 		"Place_living":12,
 		
 	}
-
+	
 	for (var i in PersonAccount) {
 		//console.log( i , PersonAccount[i]);
 		emptyOrNot( i, PersonAccount[i]);
-	}	
+	}
+	
+	test();
+	
+	function test(){
+		var formBlocks = $('.form-block');
+		
+		for(var i = 0; i < formBlocks.length; i++){
+			console.log(formBlocks[i]);
+			
+			var inputs = $(formBlocks[i]).find('input');
+			for(var j = 0; j < inputs.length; j++){
+				console.log(inputs[j]);
+			}
+			
+			var error = $(formBlocks[i]).find('.errormsg');
+			console.log(error);
+			console.log('\n\n\n\n');
+		}
+	}
 }
-
-/*function inputsForAccount(){
-	var myAccount={};
-	myAccount={
-	"First Name" : document.getElementById('FirstName').value,
-	"Last Name" : document.getElementById('LastName').value,
-	"E-mail Address": document.getElementById('EMail_Address').value,
-	"E-Mail Password": document.getElementById('EMailPassword').value,
-	"E-Mail Password Confirmetion": document.getElementById('EMailPasswordConfirmetion').value,
-	"Birth Day" : document.getElementById('bday').value,
-	"Birth Month" : document.getElementById('bmonth').value,
-	"Birth Year" : document.getElementById('byear').value,
-	"Sex" : document.getElementById('sex').value,
-	"Mobile Phone" : document.getElementById('mPhone').value,
-	"Additional E-Mail" : document.getElementById('additionalEMail').value,
-	//"Human Check" : document.getElementById('humanCheck').value,
-	"Place living" : document.getElementById('place').value
-	//"Condition_And_Politic": document.getElementById('ConditionAndPolitic').value,	
-	};
-	return myAccount;
-}
-*/
 
 function emptyOrNot(idOfElement, indexOfElement){
-	//console.log(document.getElementById(idOfElement).value);
 	if ($('#' + idOfElement).val() !== ""){
 		checking(false);
 	} else {
