@@ -1,0 +1,61 @@
+#left_side {
+    background-color: yellow;
+	display: inline-block;
+	width: 55%;
+}
+
+#right_side {
+    background-color: green;
+	display: inline-block;
+	width: 40%;
+}
+
+span.errormsg {
+	background-color: orange;
+}
+
+.inputs {
+	width: 45%;
+	margin-left: 2.5%;
+}
+
+.my_input{
+	margin-left: 2.5%;
+	margin-right: 2.5%;	
+	width: 94.5%;
+}
+
+.errormsg {
+    color: #dd4b39;
+    display: block;
+    line-height: 17px;
+    margin: 0.5em 0 0;
+}
+
+html {    
+	font-family: sans-serif;
+    direction: ltr;    
+}
+
+b {
+	margin-left: 2.5%;
+	-moz-user-select: none;
+    display: inline-block;
+    margin: 0 0 0.5em;
+    width: 100%;
+    font-weight: bolder;
+}
+
+#Birth_Day {
+	margin-left: 2.5%;
+	width: 19.5%;
+}
+
+#Birth_Month {
+	
+	width: 44.5%;
+}
+
+#Birth_Year {
+	width: 26.5%;
+}
