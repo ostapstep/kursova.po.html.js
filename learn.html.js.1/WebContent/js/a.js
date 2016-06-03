@@ -50,21 +50,38 @@ function emptyOrNot(idOfElement, indexOfElement){
 	//console.log(document.getElementById(idOfElement).value);
 	if (document.getElementById(idOfElement).value!==""){
 		console.log("ok");
+		if (indexOfElement===3|| indexOfElement===4|| indexOfElement===5){
+			$('#errormsg'+(indexOfElement-1)).html("");
+			$('#' + idOfElement).css('border', "none");
+		} else if (indexOfElement===1 || indexOfElement===2){
+			showError(1, false);
+		} else if (indexOfElement===6 || indexOfElement===7|| indexOfElement===8){
+			showError(5, false);
+		} else if (indexOfElement===9){
+			showError(6, false);
+		} 
 		//document.getElementById(idOfElement).style.border = "1px solid gray";
 	} 
 	else {
 		if (indexOfElement===3|| indexOfElement===4|| indexOfElement===5){
 			$('#errormsg'+(indexOfElement-1)).html("Це поле не може бути порожнім!!!");
-			$('#' + idOfElement).css('border', "1px solid blue");
+			$('#' + idOfElement).css('border', "1px solid red");
 		} else if (indexOfElement===1 || indexOfElement===2){
-			document.getElementById('errormsg1').innerHTML = "Це поле не може бути порожнім";
-			document.getElementById(idOfElement).style.border = "1px solid red";
+			showError(1, true);
 		} else if (indexOfElement===6 || indexOfElement===7|| indexOfElement===8){
-			document.getElementById('errormsg5').innerHTML = "Це поле не може бути порожнім";
-			document.getElementById(idOfElement).style.border = "1px solid red";
+			showError(5, true);
 		} else if (indexOfElement===9){
-			document.getElementById('errormsg6').innerHTML = "Це поле не може бути порожнім";
-			document.getElementById(idOfElement).style.border = "1px solid red";
+			showError(6, true);
 		} 
+	}
+	
+	function showError(index, isError){
+		if(isError){
+			document.getElementById('errormsg' + index).innerHTML = "Це поле не може бути порожнім";
+			document.getElementById(idOfElement).style.border = "1px solid red";
+		} else {
+			document.getElementById('errormsg' + index).innerHTML = "";
+			document.getElementById(idOfElement).style.border = "none";
+		}
 	}
 }
