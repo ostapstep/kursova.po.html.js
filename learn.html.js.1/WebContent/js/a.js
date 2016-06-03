@@ -54,8 +54,8 @@ function emptyOrNot(idOfElement, indexOfElement){
 	} 
 	else {
 		if (indexOfElement===3|| indexOfElement===4|| indexOfElement===5){
-			document.getElementById('errormsg'+(indexOfElement-1)).innerHTML = "Це поле не може бути порожнім";
-			document.getElementById(idOfElement).style.border = "1px solid red";
+			$('#errormsg'+(indexOfElement-1)).html("Це поле не може бути порожнім!!!");
+			$('#' + idOfElement).css('border', "1px solid blue");
 		} else if (indexOfElement===1 || indexOfElement===2){
 			document.getElementById('errormsg1').innerHTML = "Це поле не може бути порожнім";
 			document.getElementById(idOfElement).style.border = "1px solid red";
