@@ -2,59 +2,182 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="a.css">
-<script src="jquery-1.12.4.min.js"></script>
+	
+<head lang="uk">
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/a.css">
+	<script src="jquery-1.12.4.min.js"></script>
+	<script src="js/a.js"> </script>
+	<title>Insert title here</title>
 </head>
+
+
 <body>
-<div>Top menu!</div>
-<p>Hello, Yura and Stepan!
-task 02, done!</p>
-1
-<div>footer! Whoo!</div>
-<div style="background-color: #ddd">
-	<div style="background-color: yellow">
-		yellow
-	</div>
-	<div style="background-color: red">
-		red
-	</div>
-	<div style="background-color: green">
-		green
-	</div>
-</div>
-<div style="background-color: #ddd">
-	<span style="background-color: yellow">
-		yellow
-	</span>
-	<span style="background-color: red">
-		red
-	</span>
-	<span style="background-color: green">
-		green
-	</span>
-</div>
-<br/><br/>
 
-<input type="text"></input>
-<span class="error-default" id="a">error!</span>
+	<div id="top_head">
+		<center>
+			<h1>Створіть обліковий запис Google</h1>
+		</center>	
+	</div>
 
-<div style="background-color: #ddd">
-	<span style="background-color: yellow">
-		yellow
+	<span id="left_side">
+		<center>
+			<h3>Єдиний обліковий запис</h3>
+
+			<span>Доступ до всіх служб Google за допомогою одного безкоштовного облікового запису.</span>
+			</br>
+			</br>
+			<div>
+				<div>
+					<img src="specs/2.jpg" alt="назва першої картинки" width=""; height="";></img>
+				</div>
+				</br>
+				<h3>Усе потрібне під рукою</h3>
+				<span>Синхронізуйте файли, закладки, контакти й інші доін на всіх своїх пристроях.</span>
+				</br/><br/>
+				<div>
+						<img src="specs/1.jpg" alt="назва другої картинки" width=""; height=""></img>
+				</div>
+			</div>
+		</center>
 	</span>
-	<div style="background-color: red">
-		red
-	</div>
-	<span style="background-color: green">
-		green
+
+	<span id="right_side">
+		<!--form-->
+			<div>
+				</br>
+				<div class="names">
+					<span><b>Ім'я</b></span>
+				</div>
+
+				<div>
+					<input id="First_Name" type="text" name="FirstName" class="inputs" placeholder="Ім'я">
+					<input id="Last_Name" type="text" name="Lastname" class="inputs" placeholder="Прізвище">
+				</div>
+
+				<span id="errormsg1" class="errormsg">  </span>
+			</div>
+			
+			<div>
+				<div class="names">
+					<span><b>Виберіть ім'я користувача</b></span>
+				</div>
+
+				<div >
+					<input id="Email_Address"
+					 type="text" name="Name"  class="my_input" placeholder="@gmail.com">		
+				</div>
+
+				<span id="errormsg2" class="errormsg">  </span>
+			</div>
+
+			<div>
+				<div class="names">
+					<span><b>Створіть пароль</b></span>
+				</div>
+
+				<div>
+					<input id="EMail_Password" type="password" name="password" class="my_input">
+				</div>
+
+				<span id="errormsg3" class="errormsg">  </span>
+			</div>
+
+			<div>
+				<div class="names">
+					<span><b>Підтвердіть свій пароль</b></span>
+				</div>
+
+				<div>
+					<input id="EMail_Password_Confirmetion" type="password" name="confirmetion_password" class="my_input">	
+				</div>
+
+				<span id="errormsg4" class="errormsg">  </span>
+
+			</div>
+
+			<div class="personData">
+				<div class="names">
+					<span><b>Дата народження</b></span>
+				</div>
+
+				<span class="personData">
+					<input  id="Birth_Day" type="text" name="bday"  placeholder="день">		
+				</span>
+
+				<span class="personData">
+					<input id="Birth_Month" type="text" name="bmonth"  placeholder="місяць">
+				</span>
+
+				<span class="personData">
+					<input id="Birth_Year" type="text" name="byear"  placeholder="рік">		
+				</span>
+
+				<span id="errormsg5" class="errormsg">  </span>
+			</div>
+
+			<div>
+				<div class="names">
+					<span><b>Cтать</b></span>
+				</div>
+
+				<div>
+					<input id="Sex" name="sex" class="my_input" placeholder="...">
+				</div>
+
+				<span id="errormsg6" class="errormsg">  </span>
+			</div>
+
+			<div>
+				<div class="names">
+					<span><b>Мобільний телефон</b></span>
+				</div>
+
+				<div>
+					<input id="Mobile_Phone" name="phone" type="tel" class="my_input">		
+				</div>
+			</div>
+
+			<div>
+				<div class="names">
+					<span><b>Ваша поточна електронна адреса</b></span>
+				</div>
+
+				<div>
+					<input id="Additional_EMail" type="email" name="usremail" class="my_input" >		
+				</div>
+			</div>
+
+			<div>
+				<div class="names">
+					<span><b>Доведіть, що ви людина</b></span>
+				</div>
+
+				<div class="check_box">
+					<input id="humanCheck" type="checkbox" name="checkbox1" >		 Пропустити цей крок підтвердження (можливо знадобиться перевітка по телефону)
+				</div>
+			</div>
+
+			<div>
+				<div class="names">
+					<span><b>Місце знаходження</b></span>
+				</div>
+
+				<div class="check_box">
+					<input id="Place_living" type="text" name="place" placeholder="Україна">		 
+				</div>
+			</div>
+
+			<div>
+				<div class="check_box">
+					<input id="ConditionAndPolitic" type="checkbox" name="checkbox2" >		 Я приймаю <a href="#" class="Condition" >Загальні положення та умови</a> й <a href="#" class="Politic" >Політику конфіденціїності</a> Google
+				</div>
+			</div>
+
+			<button onclick="inputsForAccount()"> Наступний крок</button>
+		<!--/form-->
+		<span><a href="#" class="Details" > Докладніше</a> про те, чому ми просимо надати цю інформацію</span>
 	</span>
-	<span style="background-color: orange">
-		orange
-	</span>
-	<div style="background-color: blue">
-		blue
-	</div>
-</div>
+	
 </body>
 </html>
