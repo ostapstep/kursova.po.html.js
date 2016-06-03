@@ -48,40 +48,34 @@ function inputsForAccount(){
 
 function emptyOrNot(idOfElement, indexOfElement){
 	//console.log(document.getElementById(idOfElement).value);
-	if (document.getElementById(idOfElement).value!==""){
-		console.log("ok");
+	if ($('#' + idOfElement).val() !== ""){
+		checking(false);
+	} else {
+		checking(true);
+	}
+	
+	function checking(isError){
+		if(!isError){
+			console.log("ok");
+		}
 		if (indexOfElement===3|| indexOfElement===4|| indexOfElement===5){
-			$('#errormsg'+(indexOfElement-1)).html("");
-			$('#' + idOfElement).css('border', "none");
+			showError(indexOfElement-1, isError);
 		} else if (indexOfElement===1 || indexOfElement===2){
-			showError(1, false);
+			showError(1, isError);
 		} else if (indexOfElement===6 || indexOfElement===7|| indexOfElement===8){
-			showError(5, false);
+			showError(5, isError);
 		} else if (indexOfElement===9){
-			showError(6, false);
-		} 
-		//document.getElementById(idOfElement).style.border = "1px solid gray";
-	} 
-	else {
-		if (indexOfElement===3|| indexOfElement===4|| indexOfElement===5){
-			$('#errormsg'+(indexOfElement-1)).html("Це поле не може бути порожнім!!!");
-			$('#' + idOfElement).css('border', "1px solid red");
-		} else if (indexOfElement===1 || indexOfElement===2){
-			showError(1, true);
-		} else if (indexOfElement===6 || indexOfElement===7|| indexOfElement===8){
-			showError(5, true);
-		} else if (indexOfElement===9){
-			showError(6, true);
+			showError(6, isError);
 		} 
 	}
 	
 	function showError(index, isError){
 		if(isError){
-			document.getElementById('errormsg' + index).innerHTML = "Це поле не може бути порожнім";
-			document.getElementById(idOfElement).style.border = "1px solid red";
+			$('#errormsg' + index).html("Це поле не може бути порожнім");
+			$('#' + idOfElement).css('border', '1px solid red');
 		} else {
-			document.getElementById('errormsg' + index).innerHTML = "";
-			document.getElementById(idOfElement).style.border = "none";
+			$('#errormsg' + index).html('');
+			$('#' + idOfElement).css('border', 'none');
 		}
 	}
 }
